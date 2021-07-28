@@ -1,0 +1,12 @@
+/*-- COLLAPSIBLE_TABLE 2-visual 2021-06-20 --*/
+/* 830px or less:  Table collapses into a single column layout.*/
+
+@media (max-width: 830px) { 
+  td,th{float:left;width:100%; /* causes collapsing */
+    box-sizing:border-box;  /* fixes cells overflowing the table due to padding */
+    min-height:1.625rem; /* height for empty cells turning into ugly thin lines and visual integrity */
+    text-align:left}
+  th{height:1.625rem} /* height for empty cells turning into ugly thin lines and visual integrity */  
+  tr:nth-child(2n) td{background:#ddd} /* makes all TDs of every 2nd row lighter */
+  tr *:nth-child(1){font-weight:bold} /* makes every first TD or TH of a TR bold */  
+}
